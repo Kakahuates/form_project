@@ -7,58 +7,74 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header class="header">
-		<h1 id="title" class="text-centered">Welcome to this form</h1>
-		<p id="description" class="description text-centered">This a form to practice html</p>
-	</header>
-	<form id="survey-form">
-		<label id="name-label" for="name">Name</label>
-		<input type="text" name="name" id="name" placeholder="Enter your name" required>
-		
-		<label id="email-label" for="email">Email</label>
-		<input type="email" name="email" id="email" placeholder="Enter your email" required>
+	<div class="container">
+		<header class="header">
+			<h1 id="title" class="text-center">Welcome to this form</h1>
+			<p id="description" class="description text-center">This a form to practice html</p>
+		</header>
+		<form id="survey-form">
+			<div class="form-group">
+				<label id="name-label" for="name">Name</label>
+				<input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+			</div>
+			
+			<div class="form-group">
+				<label id="email-label" for="email">Email</label>
+				<input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+			</div>
 
-		<label id="number-label" for="number">Age</label>
-		<input type="number" name="age" id="number" min="10" max="99" placeholder="Enter your age">
+			<div class="form-group">
+				<label id="number-label" for="number">Age</label>
+				<input type="number" name="age" id="number" class="form-control" min="10" max="99" placeholder="Enter your age">
+			</div>
 
-		<p>Which option best describes your current role?</p>
-		<select name="role" id="dropdown" required>
-			<option value="student">Student</option>
-			<option value="job">Full time job</option>
-			<option value="learner">Full time learner</option>
-			<option value="preferNo">Prefer not to say</option>
-		</select>
+			<div class="form-group">
+				<p>Which option best describes your current role?</p>
+				<select name="role" id="dropdown" class="form-control" required>
+					<option value="student">Student</option>
+					<option value="job">Full time job</option>
+					<option value="learner">Full time learner</option>
+					<option value="preferNo">Prefer not to say</option>
+				</select>
+			</div>
 
-		<p>Would yo recommend this form to a friend?</p>
-		<label>
-			<input name="user-recommend" value="definately" type="radio">Definately
-		</label>
+			<div class="form-group">
+				<p>Would yo recommend this form to a friend?</p>
+				<label>
+					<input name="user-recommend" value="definately" type="radio" class="input-radio" checked> Definately
+				</label>
+				<label>
+					<input name="user-recommend" value="maybe" type="radio" class="input-radio">Maybe
+				</label>
+				<label>
+					<input name="user-recommend" value="not-sure" type="radio" class="input-radio">Not sure
+				</label>
+			</div>
 
-		<label>
-			<input name="user-recommend" value="maybe" type="radio">Maybe
-		</label>
+			<div class="form-group">
+				<p>What would you like to do before to study?
+					<span class="clue">(check all that apply)</span>
+				</p>
+				<label>
+					<input class="input-checkbox" name="prefer" type="checkbox" value="hobbies">Eat
+				</label>
+				<label>
+					<input class="input-checkbox" name="prefer" type="checkbox" value="hobbies">Sleep
+				</label>
+				<label>
+					<input class="input-checkbox" name="prefer" type="checkbox" value="hobbies">Bath
+				</label>
+			</div>
 
-		<label>
-			<input name="user-recommend" value="not-sure" type="radio">Not sure
-		</label>
+			<div class="form-group">
+				<p>Write some ideas to make this form better</p>
+				<textarea class="input-textarea" name="comment" id="comments" cols="30" rows="10" placeholder="Enter your comments here..."></textarea>
+			</div>
 
-		<p>What would you like to do before to study?</p>
-		<label>
-			<input name="prefer" type="checkbox" value="hobbies">Eat
-		</label>
-
-		<label>
-			<input name="prefer" type="checkbox" value="hobbies">Sleep
-		</label>
-
-		<label>
-			<input name="prefer" type="checkbox" value="hobbies">Bath
-		</label>
-
-		<p>Write some ideas to make this form better</p>
-		<textarea name="comment" id="comments" cols="30" rows="10" placeholder="Enter your comments here..."></textarea>
-
-		<button type="submit" id="submit" >Submit</button>
-	</form>
+			<div class="form-group">
+				<button type="submit" id="submit" class="submit-button">Submit</button>
+			</div>
+		</form>
+	</div>
 </body>
 </html>
